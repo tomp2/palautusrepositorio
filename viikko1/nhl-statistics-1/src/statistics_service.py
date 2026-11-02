@@ -34,10 +34,4 @@ class StatisticsService:
             key=sort_by_points
         )
 
-        result = []
-        i = 0
-        while i <= how_many:
-            result.append(sorted_players[i])
-            i += 1
-
-        return result
+        return sorted_players[:how_many]

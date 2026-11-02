@@ -42,6 +42,6 @@ class TestStatisticsService(unittest.TestCase):
         self.assertEqual(self.stats.team("TPS"), [])
 
     def test_top_returns_players_sorted_by_points(self):
-        names = [player.name for player in self.stats.top(2)]
+        names = [player.name for player in self.stats.top(3)]
 
         self.assertEqual(names, ["Gretzky", "Lemieux", "Yzerman"])
