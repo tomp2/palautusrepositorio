@@ -12,6 +12,34 @@ Register With Valid Username And Password
     Click  button >> text=Register
     Register Should Succeed
 
+Register With Password Containing Numbers
+    Set Username  pekka
+    Set Password  kalle123
+    Set Password Confirmation  kalle123
+    Click  button >> text=Register
+    Register Should Succeed
+
+Register With Password Containing Special Characters
+    Set Username  pekka
+    Set Password  kalle#abc
+    Set Password Confirmation  kalle#abc
+    Click  button >> text=Register
+    Register Should Succeed
+
+Register With Password Containing Only Lowercase Letters
+    Set Username  pekka
+    Set Password  kallekalle
+    Set Password Confirmation  kallekalle
+    Click  button >> text=Register
+    Register Should Fail With Message  Password must contain at least one non-letter character
+
+Register With Password Containing Only Uppercase And Lowercase Letters
+    Set Username  pekka
+    Set Password  KalleKalle
+    Set Password Confirmation  KalleKalle
+    Click  button >> text=Register
+    Register Should Fail With Message  Password must contain at least one non-letter character
+
 Register With Too Short Username And Valid Password
     Set Username  pe
     Set Password  pekka123
