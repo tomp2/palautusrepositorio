@@ -30,3 +30,9 @@ Main Page Should Be Open
 Go To Login Page
     Go To  ${LOGIN_URL}
 
+Register Page Should Be Open
+    Get Title  ==  Register
+
+Go To Starting Page
+    Go To  ${HOME_URL}
+
