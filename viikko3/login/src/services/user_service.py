@@ -49,5 +49,8 @@ class UserService:
         if password.isalpha():
             raise UserInputError("Password must contain at least one non-letter character")
 
+        if password != password_confirmation:
+            raise UserInputError("Passwords do not match")
+
 
 user_service = UserService()

@@ -12,6 +12,20 @@ Register With Valid Username And Password
     Click  button >> text=Register
     Register Should Succeed
 
+Register With Matching Password Confirmation
+    Set Username  pekka
+    Set Password  pekka123
+    Set Password Confirmation  pekka123
+    Click  button >> text=Register
+    Register Should Succeed
+
+Register With Nonmatching Password Confirmation
+    Set Username  pekka
+    Set Password  pekka123
+    Set Password Confirmation  pekka456
+    Click  button >> text=Register
+    Register Should Fail With Message  Passwords do not match
+
 Register With Password Containing Numbers
     Set Username  pekka
     Set Password  kalle123
